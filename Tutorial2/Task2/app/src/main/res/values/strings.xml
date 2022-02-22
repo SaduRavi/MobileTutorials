@@ -7,5 +7,9 @@
     <string name="next">Next</string>
     <string name="wrong">Wrong</string>
     <string name="correct">Correct</string>
+    <string name="finish">Finish</string>
+    <string name="restart">Restart</string>
+    <string name="correctNum">Correct Answers</string>
+    <string name="wrongNum">Incorrect Answers</string>
 
 </resources>

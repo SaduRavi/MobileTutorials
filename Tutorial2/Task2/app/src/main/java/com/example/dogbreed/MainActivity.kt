@@ -1,5 +1,6 @@
 package com.example.dogbreed
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
     private val finalImagesIndex = mutableListOf<Int>()
     private val gen = Random()
     private var solution = 0
+    private var correctAnswers = 0
+    private var wrongAnswers = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,6 +89,17 @@ class MainActivity : AppCompatActivity() {
             checkAnswer(3,resultText)
             imgView1.isClickable = false
             imgView2.isClickable = false
+        }
+
+
+        val finishButton = findViewById<Button>(R.id.button3)
+        finishButton.setOnClickListener {
+            val contactIntent = Intent(this, MainActivity2::class.java)
+            val message1 = correctAnswers.toString()
+            val message2 = wrongAnswers.toString()
+            contactIntent.putExtra("correct",message1)
+            contactIntent.putExtra("wrong",message2)
+            startActivity(contactIntent)
         }
     }
 
@@ -143,10 +157,12 @@ class MainActivity : AppCompatActivity() {
         if (num ==solution ){
             solutionLabel.text = getString(R.string.correct)
             solutionLabel.setBackgroundColor(Color.GREEN)
+            correctAnswers += 1
         }
         else{
             solutionLabel.text = getString(R.string.wrong)
             solutionLabel.setBackgroundColor(Color.RED)
+            wrongAnswers += 1
         }
     }
 
