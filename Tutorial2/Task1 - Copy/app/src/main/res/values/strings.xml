@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Dog Breed</string>
+    <string name='imgSlot1'>Img 1</string>
+    <string name="imgSlot2">Img 2</string>
+    <string name="imgSlot3">Img 3</string>
+    <string name="submit">Submit</string>
+    <string name="next">Next</string>
+    <string name="wrong">Wrong</string>
+    <string name="correct">Correct</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lottery Program</string>
+    <string name="button">Button</string>
+    <string name="generate">Generate</string>
+    <string name="all_the_results">ALL THE RESULTS</string>
+    <string name="allGenNum">All Generated Numbers</string>
+    <string name="mainHeaderLabel">Enter a number to be removed</string>
+    <string name="removeNumberButton">Remove</string>
+    <string name="resetRemoveNumbers">Reset</string>
+    <string name="changeNumberButton">Change</string>
+</resources>
